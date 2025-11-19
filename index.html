@@ -1,11 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Étudiant en Cybersécurité</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>xxxxxxXXXXXx</h1>
+    <header class="header">
+        <div class="logo">Mon<span>Portfolio</span></div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#plateformes">Plateformes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION ACCUEIL -->
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1>Étudiant en <span>Cybersécurité</span></h1>
+                <p>
+                    Passionné par le pentest, la sécurité des systèmes et des applications web.  
+                    À la recherche d’opportunités pour développer mes compétences et contribuer à la sécurité des SI.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn primary">Voir mes projets</a>
+                    <a href="#contact" class="btn secondary">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION A PROPOS -->
+        <section id="apropos" class="section">
+            <h2>À propos de moi</h2>
+            <div class="section-content about">
+                <div>
+                    <p>
+                        Je suis étudiant en cybersécurité, avec un intérêt particulier pour :
+                    </p>
+                    <ul>
+                        <li>Pentest (web, réseau, systèmes)</li>
+                        <li>CTF et plateformes de challenges</li>
+                        <li>Analyse de vulnérabilités et automatisation en Python</li>
+                    </ul>
+                    <p>
+                        J’utilise au quotidien des environnements Linux, des outils de sécurité et des plateformes comme
+                        Root-Me, Hack The Box et TryHackMe pour progresser et documenter mes apprentissages.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION COMPÉTENCES -->
+        <section id="competences" class="section">
+            <h2>Compétences</h2>
+            <div class="section-content skills">
+                <div class="skill-card">
+                    <h3>Cybersécurité</h3>
+                    <ul>
+                        <li>Reconnaissance & scanning (Nmap, dirb, etc.)</li>
+                        <li>Web : SQLi, XSS, LFI/RFI, auth bypass (niveau étudiant)</li>
+                        <li>Linux & Windows privilege escalation (bases)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Systèmes & Réseaux</h3>
+                    <ul>
+                        <li>Linux (Kali, Parrot, Ubuntu)</li>
+                        <li>Bases d’administration réseau (TCP/IP, SSH, DNS…)</li>
+                        <li>Virtualisation (VirtualBox, UTM…)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Développement & Scripts</h3>
+                    <ul>
+                        <li>Python (scripts de sécurité, automatisation)</li>
+                        <li>Bash, HTML/CSS, JavaScript (niveau étudiant)</li>
+                        <li>Git / GitHub pour versionning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PROJETS -->
+        <section id="projets" class="section">
+            <h2>Projets Cybersécurité</h2>
+            <div class="section-content projects" id="projects-container">
+                <!-- Exemples de cartes projet, tu pourras dupliquer/adapter -->
+                <article class="project-card">
+                    <h3>Lab Web Pentest – SQL Injection</h3>
+                    <p>
+                        Analyse et exploitation d’une vulnérabilité SQLi sur une application web d’exercice.
+                        Rédaction d’un mini rapport : vulnérabilité, PoC, impact et pistes de mitigation.
+                    </p>
+                    <span class="tag">Web</span>
+                    <span class="tag">SQLi</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>Enum réseau & escalade de privilèges</h3>
+                    <p>
+                        Machine type CTF sur une plateforme (THM/HTB) : reconnaissance, découverte de services,
+                        exploitation initiale et escalade de privilèges sur un système Linux.
+                    </p>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Privilege Escalation</span>
+                </article>
+
+                <article class="project-card">
+                    <h3>Script Python d’automatisation</h3>
+                    <p>
+                        Script pour automatiser des tests de connexion sur un formulaire d’authentification
+                        à partir de listes d’utilisateurs et de mots de passe (usage légal / lab uniquement).
+                    </p>
+                    <span class="tag">Python</span>
+                    <span class="tag">Automation</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION PLATEFORMES -->
+        <section id="plateformes" class="section">
+            <h2>Plateformes de challenges</h2>
+            <div class="section-content platforms">
+                <p>
+                    Je m’entraîne régulièrement sur différentes plateformes de cybersécurité.
+                </p>
+                <div class="platform-links">
+                    <a href="https://www.root-me.org/" target="_blank" class="platform-card">
+                        <h3>Root-Me</h3>
+                        <p>Challenges web, réseau, crypto, forensics…</p>
+                    </a>
+                    <a href="https://app.hackthebox.com/" target="_blank" class="platform-card">
+                        <h3>Hack The Box</h3>
+                        <p>Machines orientées pentest & Red Team.</p>
+                    </a>
+                    <a href="https://tryhackme.com/" target="_blank" class="platform-card">
+                        <h3>TryHackMe</h3>
+                        <p>Labs guidés et parcours débutant à avancé.</p>
+                    </a>
+                </div>
+                <p class="hint">
+                    Tu pourras remplacer les liens ci-dessus par les URLs directes de tes profils Root-Me, HTB, THM.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="section-content contact">
+                <p>
+                    Intéressé par mon profil ? N’hésitez pas à me contacter pour un stage, une alternance ou un projet.
+                </p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E‑mail</label>
+                        <input type="email" id="email" name="email" placeholder="votre.mail@exemple.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Envoyer (démo)</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© 2025 - Étudiant en Cybersécurité</span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
